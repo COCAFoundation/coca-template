@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="css/bootstrap.min.css"rel="stylesheet" media="screen"/>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
+    <link href="css/default.css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Karla|Actor' rel='stylesheet' type='text/css'>
+    <title>Untitled Document</title>
+    </head>
+ 
+<body>
+	<div class="container ctr" style="background:#fff;">
+   		<?php if($this->countModules('top-menu-left') || $this->countModules('top-menu-right')){ ?>
+            <div class="row">
+                <div class="span7"><jdoc:include type="modules" name="top-menu-left" style="xhtml" /></div>
+                <div class="span5"><jdoc:include type="modules" name="top-menu-right" style="xhtml" /></div>
+            </div>
+        <?php }?>
+    	<div class="row-fluid banner">                    
+        	<div class="span7"><a href="<?php echo $this->baseurl ?>"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo_1.png"/></a></div>
+        	<div class="span4"><jdoc:include type="modules" name="banner-right" style="xhtml" /></div>
+            <span class="row-fluid banner-left"></span>
+            <span class="row-fluid banner-right"></span>
+        </div>
+       	<div class="row-fluid banner-bottom" style=""></div>
+       	<?php if($this->countModules('slider')){ ?>
+            <div class="row-fluid">
+                <div class="span12"><jdoc:include type="modules" name="slider" style="xhtml" /></div>
+            </div>
+       	<?php }?>
+        <div class="row-fluid contextual-menu" >
+        	<div class="span12">
+            	<div class="navbar">
+                    <div class="navbar-inner">
+                    </div>
+                </div>
+        	</div>
+           <span class="row-fluid contextual-menu-left"></span>
+        </div>
+        <div class="row-fluid contextual-menu-bottom" style=""></div>
+       	<?php if($this->countModules('breadcrumb')){ ?>   
+        <div class="row-fluid">
+        	<div class="span12"><jdoc:include type="modules" name="breadcrumb" /></div>
+            </div>
+      <?php }?> 
+      <?php if ($this->getBuffer('message')){ ?> 
+            <div class="row-fluid">
+                <div class="span12"><jdoc:include type="message" /></div>
+            </div> 
+      <?php } ?> 
+              <?php  
+         $content = 'middle';
+         $class = 'span12';
+         if($this->countModules('left') && $this->countModules('middle') && $this->countModules('right')){
+          $content = 'none'; 
+         }elseif(!$this->countModules('left') && !$this->countModules('middle') && $this->countModules('right')){ 
+          $content = 'left';  
+          $class = 'span8';
+         }elseif($this->countModules('left') && !$this->countModules('middle') && !$this->countModules('right')){
+          $content = 'right';   
+          $class = 'span8';     
+         }elseif($this->countModules('left') && !$this->countModules('middle') && !$this->countModules('right')){
+          $content = 'left';  
+          $class = 'span4';       
+         }elseif(!$this->countModules('left') && !$this->countModules('middle') && $this->countModules('right')){
+          $content = 'left';  
+          $class = 'span4';     
+         }elseif(!$this->countModules('left') && !$this->countModules('middle') && !$this->countModules('right')){
+          $content = 'middle';  
+          $class = 'span12';     
+         }elseif(!$this->countModules('left') && $this->countModules('middle') && !$this->countModules('right')){
+          $content = 'left';  
+          $class = 'span4';     
+         }  
+        ?> 
+      
+       
+    <div class="row-fluid">
+    
+        <?php if($this->countModules('left')){ ?>
+          <div class="span4"><jdoc:include type="modules" name="left" style="xhtml" /></div>        
+          <?php }elseif($content == 'left'){ ?>
+          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /></div>        
+          <?php }?>
+          
+          <?php if($this->countModules('middle')){ ?>
+          <div class="span4"><jdoc:include type="modules" name="middle" style="xhtml" /></div>        
+          <?php }elseif($content == 'middle'){ ?>
+          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /></div>        
+        <?php }?>         
+  
+          <?php if($this->countModules('right')){ ?>
+          <div class="span4"><jdoc:include type="modules" name="right" style="xhtml" /></div>        
+          <?php }elseif($content == 'right'){ ?>
+          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /></div>        
+          <?php }?>     
+	</div>                     
+</div>
+	<?php if($this->countModules('footer')){ ?> 
+    <div class="container">
+    	<div class="row-fluid">
+        	<div class="span12"><jdoc:include type="modules" name="footer" style="xhtml" /></div>
+        </div>
+    </div>
+    <?php } ?>
+    <div class="container">
+    	<div class="row-fluid">
+        	<div class="span12"><span id="copywrite"><jdoc:include type="modules" name="copywrite" style="xhtml" /></span></div>
+        </div>
+    </div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://localhost/coca_template/javascript/bootstrap.min.js"></script>
+        <script type="text/javascript">
+		  (function($){   
+			$(document).ready(function(){
+			  // dropdown
+			  $('.parent').addClass('dropdown');
+			  $('.parent > a').addClass('dropdown-toggle');
+			  $('.parent > a').attr('data-toggle', 'dropdown');
+			  $('.parent > a').append('<b class="caret"></b>');
+			  $('.parent > ul').addClass('dropdown-menu');
+			  // divider 
+			  $('<li class="divider"></li>').insertAfter('.item-105');
+			});
+		  })(jQuery);
+		</script>
+</body>
+</html>
