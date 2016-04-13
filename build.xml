@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="COCA Foundation Template" default="copy_all" basedir=".">
+	<property name="src"   value="."/>
+	<property name="public_html"  value="../coca/templates/coca/" />
+	<target name="copy_all" description="Copies files to public_html project.">
+		<echo message="Running build.xml. Copying files from dev to test..." />
+		<copy file="${src}/*" todir="${test}"/>
+	</target>
+</project>
