@@ -1,0 +1,245 @@
+.social-icons-sprite {
+    background-image: url('../images/social-icons-spritesheet.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.social-icons-sprite-500px {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.social-icons-sprite-aboutme {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -5px;
+}
+
+.social-icons-sprite-add-this {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -5px;
+}
+
+.social-icons-sprite-blogger {
+    width: 32px;
+    height: 32px;
+    background-position: -131px -5px;
+}
+
+.social-icons-sprite-delicious {
+    width: 32px;
+    height: 32px;
+    background-position: -173px -5px;
+}
+
+.social-icons-sprite-deviant-art {
+    width: 32px;
+    height: 32px;
+    background-position: -215px -5px;
+}
+
+.social-icons-sprite-digg {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -47px;
+}
+
+.social-icons-sprite-email {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -47px;
+}
+
+.social-icons-sprite-etsy {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -47px;
+}
+
+.social-icons-sprite-facebook {
+    width: 32px;
+    height: 32px;
+    background-position: -131px -47px;
+}
+
+.social-icons-sprite-feedburner {
+    width: 32px;
+    height: 32px;
+    background-position: -173px -47px;
+}
+
+.social-icons-sprite-flickr {
+    width: 32px;
+    height: 32px;
+    background-position: -215px -47px;
+}
+
+.social-icons-sprite-google {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -89px;
+}
+
+.social-icons-sprite-google-buzz {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -89px;
+}
+
+.social-icons-sprite-google-plus {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -89px;
+}
+
+.social-icons-sprite-icondock {
+    width: 32px;
+    height: 32px;
+    background-position: -131px -89px;
+}
+
+.social-icons-sprite-icq {
+    width: 32px;
+    height: 32px;
+    background-position: -173px -89px;
+}
+
+.social-icons-sprite-myspace {
+    width: 32px;
+    height: 32px;
+    background-position: -215px -89px;
+}
+
+.social-icons-sprite-photobucket {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -131px;
+}
+
+.social-icons-sprite-picasa {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -131px;
+}
+
+.social-icons-sprite-pinterest {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -131px;
+}
+
+.social-icons-sprite-podcast {
+    width: 32px;
+    height: 32px;
+    background-position: -131px -131px;
+}
+
+.social-icons-sprite-posterous {
+    width: 32px;
+    height: 32px;
+    background-position: -173px -131px;
+}
+
+.social-icons-sprite-qik {
+    width: 32px;
+    height: 32px;
+    background-position: -215px -131px;
+}
+
+.social-icons-sprite-quora {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -173px;
+}
+
+.social-icons-sprite-reddit {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -173px;
+}
+
+.social-icons-sprite-retweet {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -173px;
+}
+
+.social-icons-sprite-rss {
+    width: 32px;
+    height: 32px;
+    background-position: -131px -173px;
+}
+
+.social-icons-sprite-scribd {
+    width: 32px;
+    height: 32px;
+    background-position: -173px -173px;
+}
+
+.social-icons-sprite-sharethis {
+    width: 32px;
+    height: 32px;
+    background-position: -215px -173px;
+}
+
+.social-icons-sprite-skype {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -215px;
+}
+
+.social-icons-sprite-slashdot {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -215px;
+}
+
+.social-icons-sprite-smugmug {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -215px;
+}
+
+.social-icons-sprite-stumbleupon {
+    width: 32px;
+    height: 32px;
+    background-position: -131px -215px;
+}
+
+.social-icons-sprite-tumblr {
+    width: 32px;
+    height: 32px;
+    background-position: -173px -215px;
+}
+
+.social-icons-sprite-twitter {
+    width: 32px;
+    height: 32px;
+    background-position: -215px -215px;
+}
+
+.social-icons-sprite-twitter-2 {
+    width: 32px;
+    height: 32px;
+    background-position: -257px -5px;
+}
+
+.social-icons-sprite-vimeo {
+    width: 32px;
+    height: 32px;
+    background-position: -257px -47px;
+}
+
+.social-icons-sprite-w3 {
+    width: 32px;
+    height: 32px;
+    background-position: -257px -89px;
+}
+
+.social-icons-sprite-youtube {
+    width: 32px;
+    height: 32px;
+    background-position: -257px -131px;
+}

@@ -1,0 +1,401 @@
+.vega-sprite {
+    background-image: url('../images/vega-spritesheet.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.vega-sprite-arrow_down {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -5px;
+}
+
+.vega-sprite-arrow_left {
+    width: 16px;
+    height: 16px;
+    background-position: -31px -5px;
+}
+
+.vega-sprite-arrow_right {
+    width: 16px;
+    height: 16px;
+    background-position: -57px -5px;
+}
+
+.vega-sprite-arrow_up {
+    width: 16px;
+    height: 16px;
+    background-position: -83px -5px;
+}
+
+.vega-sprite-attach {
+    width: 16px;
+    height: 16px;
+    background-position: -109px -5px;
+}
+
+.vega-sprite-badge_css {
+    width: 16px;
+    height: 16px;
+    background-position: -135px -5px;
+}
+
+.vega-sprite-badge_html {
+    width: 16px;
+    height: 16px;
+    background-position: -161px -5px;
+}
+
+.vega-sprite-badge_rss {
+    width: 16px;
+    height: 16px;
+    background-position: -187px -5px;
+}
+
+.vega-sprite-bullet {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -31px;
+}
+
+.vega-sprite-calculator {
+    width: 16px;
+    height: 16px;
+    background-position: -31px -31px;
+}
+
+.vega-sprite-calendar {
+    width: 16px;
+    height: 16px;
+    background-position: -57px -31px;
+}
+
+.vega-sprite-cd {
+    width: 16px;
+    height: 16px;
+    background-position: -83px -31px;
+}
+
+.vega-sprite-comment {
+    width: 16px;
+    height: 16px;
+    background-position: -109px -31px;
+}
+
+.vega-sprite-comment_add {
+    width: 16px;
+    height: 16px;
+    background-position: -135px -31px;
+}
+
+.vega-sprite-comment_delete {
+    width: 16px;
+    height: 16px;
+    background-position: -161px -31px;
+}
+
+.vega-sprite-comment_edit {
+    width: 16px;
+    height: 16px;
+    background-position: -187px -31px;
+}
+
+.vega-sprite-control_back {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -57px;
+}
+
+.vega-sprite-control_forward {
+    width: 16px;
+    height: 16px;
+    background-position: -31px -57px;
+}
+
+.vega-sprite-control_pause {
+    width: 16px;
+    height: 16px;
+    background-position: -57px -57px;
+}
+
+.vega-sprite-control_play {
+    width: 16px;
+    height: 16px;
+    background-position: -83px -57px;
+}
+
+.vega-sprite-control_stop {
+    width: 16px;
+    height: 16px;
+    background-position: -109px -57px;
+}
+
+.vega-sprite-copy {
+    width: 16px;
+    height: 16px;
+    background-position: -135px -57px;
+}
+
+.vega-sprite-disc {
+    width: 16px;
+    height: 16px;
+    background-position: -161px -57px;
+}
+
+.vega-sprite-download {
+    width: 16px;
+    height: 16px;
+    background-position: -187px -57px;
+}
+
+.vega-sprite-error {
+    width: 16px;
+    height: 16px;
+    background-position: -5px -83px;
+}
+
+.vega-sprite-file {
+    width: 16px;
+    height: 16px;
+    background-position: -31px -83px;
+}
+
+.vega-sprite-file_add {
+    width: 16px;
+    height: 16px;
+    background-position: -57px -83px;
+}
+
+.vega-sprite-file_delete {
+    width: 16px;
+    height: 16px;
+    background-position: -83px -83px;
+}
+
+.vega-sprite-file_edit {
+    width: 16px;
+    height: 16px;
+    background-position: -109px -83px;
+}
+
+.vega-sprite-file_move {
+    width: 16px;
+    height: 16px;
+    background-position: -135px -83px;
+}
+
+.vega-sprite-github {
+    width: 30px;
+    height: 30px;
+    background-position: -161px -83px;
+}
+
+.vega-sprite-gmail {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -123px;
+}
+
+.vega-sprite-heart {
+    width: 16px;
+    height: 16px;
+    background-position: -201px -83px;
+}
+
+.vega-sprite-image {
+    width: 16px;
+    height: 16px;
+    background-position: -45px -109px;
+}
+
+.vega-sprite-info {
+    width: 16px;
+    height: 16px;
+    background-position: -71px -109px;
+}
+
+.vega-sprite-ipod {
+    width: 16px;
+    height: 16px;
+    background-position: -97px -109px;
+}
+
+.vega-sprite-ipod_podcast {
+    width: 16px;
+    height: 16px;
+    background-position: -123px -109px;
+}
+
+.vega-sprite-key {
+    width: 16px;
+    height: 16px;
+    background-position: -201px -109px;
+}
+
+.vega-sprite-laptop {
+    width: 16px;
+    height: 16px;
+    background-position: -45px -135px;
+}
+
+.vega-sprite-linkedin {
+    width: 30px;
+    height: 30px;
+    background-position: -149px -123px;
+}
+
+.vega-sprite-lock {
+    width: 16px;
+    height: 16px;
+    background-position: -71px -135px;
+}
+
+.vega-sprite-lock_open {
+    width: 16px;
+    height: 16px;
+    background-position: -97px -135px;
+}
+
+.vega-sprite-magnify {
+    width: 16px;
+    height: 16px;
+    background-position: -123px -135px;
+}
+
+.vega-sprite-mail {
+    width: 16px;
+    height: 16px;
+    background-position: -189px -135px;
+}
+
+.vega-sprite-mobile {
+    width: 16px;
+    height: 16px;
+    background-position: -45px -161px;
+}
+
+.vega-sprite-newspaper {
+    width: 16px;
+    height: 16px;
+    background-position: -71px -161px;
+}
+
+.vega-sprite-phone {
+    width: 16px;
+    height: 16px;
+    background-position: -97px -161px;
+}
+
+.vega-sprite-photo {
+    width: 16px;
+    height: 16px;
+    background-position: -123px -161px;
+}
+
+.vega-sprite-print {
+    width: 16px;
+    height: 16px;
+    background-position: -189px -161px;
+}
+
+.vega-sprite-stackoverflow {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -187px;
+}
+
+.vega-sprite-star {
+    width: 16px;
+    height: 16px;
+    background-position: -45px -187px;
+}
+
+.vega-sprite-trash {
+    width: 16px;
+    height: 16px;
+    background-position: -71px -187px;
+}
+
+.vega-sprite-trolley {
+    width: 16px;
+    height: 16px;
+    background-position: -97px -187px;
+}
+
+.vega-sprite-trolley_add {
+    width: 16px;
+    height: 16px;
+    background-position: -123px -187px;
+}
+
+.vega-sprite-trolley_delete {
+    width: 16px;
+    height: 16px;
+    background-position: -149px -187px;
+}
+
+.vega-sprite-tumblr {
+    width: 30px;
+    height: 30px;
+    background-position: -175px -187px;
+}
+
+.vega-sprite-twitter {
+    width: 30px;
+    height: 30px;
+    background-position: -213px -5px;
+}
+
+.vega-sprite-unzip {
+    width: 16px;
+    height: 16px;
+    background-position: -213px -45px;
+}
+
+.vega-sprite-upload {
+    width: 16px;
+    height: 16px;
+    background-position: -239px -45px;
+}
+
+.vega-sprite-user {
+    width: 16px;
+    height: 16px;
+    background-position: -227px -71px;
+}
+
+.vega-sprite-user_add {
+    width: 16px;
+    height: 16px;
+    background-position: -227px -97px;
+}
+
+.vega-sprite-user_delete {
+    width: 16px;
+    height: 16px;
+    background-position: -227px -123px;
+}
+
+.vega-sprite-user_edit {
+    width: 16px;
+    height: 16px;
+    background-position: -215px -149px;
+}
+
+.vega-sprite-vcard {
+    width: 16px;
+    height: 16px;
+    background-position: -241px -149px;
+}
+
+.vega-sprite-video {
+    width: 16px;
+    height: 16px;
+    background-position: -215px -175px;
+}
+
+.vega-sprite-zip {
+    width: 16px;
+    height: 16px;
+    background-position: -241px -175px;
+}

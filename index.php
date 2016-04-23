@@ -20,16 +20,18 @@ $this->_script = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s
   ?>
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/system/css/system.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/system/css/general.css" type="text/css" />
-    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/default.css" rel="stylesheet" />  
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/powerRotator.css" rel="stylesheet" media="screen"/>
+    <!-- Sprite Map CSS Files -->
+    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/social-icons.css" rel="stylesheet" /> 
+    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/vega.css" rel="stylesheet" /> 
+    
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Rokkitt|Josefin+Slab:300,400|Karla' rel='stylesheet' type='text/css'>
   <?php if($pageclass){?>
       <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/<?php echo htmlspecialchars($pageclass) ?>.css" type="text/css"/>
     <?php }?>
     <jdoc:include type="head" /> 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/javascript/bootstrap.min.js"></script>
     <meta name="google-translate-customization" content="cdf027e5440b9c8f-cb40fc80eac9fe21-g025a20baa11a5cbc-19"></meta>
     </head>
 <body>
@@ -77,20 +79,17 @@ $this->_script = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s
           </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
              <div class="social-bar"> 
-                <a href="http://www.facebook.com/COCAFoundation" target="_blank" class="">
-                    <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/social-icons-32x32/facebook.png" alt="Children of Central Asia Foundation"/>
+                <a href="http://www.facebook.com/COCAFoundation" target="_blank">
+                	<i class="social-icons-sprite social-icons-sprite-facebook"></i>
                 </a>
                 <a href="https://twitter.com/cocafoundation" target="_blank" class="">
-                    <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/social-icons-32x32/twitter.png" alt="Children of Central Asia Foundation"/>
+                    <i class="social-icons-sprite social-icons-sprite-twitter"></i>
                 </a>
                 <a href="http://www.youtube.com/cocafoundation" target="_blank" class="">
-                    <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/social-icons-32x32/youtube.png" alt="Children of Central Asia Foundation"/>
+                    <i class="social-icons-sprite social-icons-sprite-youtube"></i>
                 </a>
                 <a href="http://www.flickr.com/photos/cocafoundation/" target="_blank" class="">
-                    <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/social-icons-32x32/flickr.png" alt="Children of Central Asia Foundation"/>
-                </a>
-               <a href="http://feeds.feedburner.com/childrenofcentralasia/PlJX" target="_blank" class="">
-                    <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/social-icons-32x32/rss.png" alt="RSS Logo"/>
+                    <i class="social-icons-sprite social-icons-sprite-flickr"></i>
                 </a>
             </div>
 <div class="clearfix">&nbsp;</div>
@@ -165,20 +164,20 @@ function googleTranslateElementInit() {
         <?php if($this->countModules('left')){ ?>
           <div class="col-md-4 module-bar-wrapper"><div class="module-bar"><jdoc:include type="modules" name="left" style="xhtml" /></div></div>
         <?php }elseif($content == 'left'){ ?>
-          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /></div>        
+          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /><div class="clearfix" height="15px">&nbsp;</div></div>        
         <?php }?>
           
         <?php if($this->countModules('middle')){ ?>
           <div class="col-md-4 module-bar-wrapper"><div class="module-bar"><jdoc:include type="modules" name="middle" style="xhtml" /></div></div>
         <?php }elseif($content == 'middle'){ ?>
-          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /></div>        
+          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /><div class="clearfix" height="15px">&nbsp;</div>  </div>        
         <?php }?>         
   
         <?php if($this->countModules('right')){ ?>
           <div class="col-md-4 module-bar-wrapper"><div class="module-bar"><jdoc:include type="modules" name="right" style="xhtml" /></div></div>
         <?php }elseif($content == 'right'){ ?>
-          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /></div>        
-        <?php }?>     
+          <div class="<?php echo $class;?> mainContent"><jdoc:include type="component" /><div class="clearfix" height="15px">&nbsp;</div>  </div>        
+        <?php }?>   
     </div>                    
 </div>
   <?php if($this->countModules('footer')){ ?> 
@@ -196,6 +195,8 @@ function googleTranslateElementInit() {
       </div>
       <div class="clearfix" style="height:6px;"></div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <script type="text/javascript">
       (function($){   
         $(window).load(function(){
