@@ -1,5 +1,37 @@
 <?php
-defined('_JEXEC') or die;
+$doc = JFactory::getDocument();
+
+$dontInclude = array(
+		'/media/jui/js/jquery.js',
+		'/media/jui/js/jquery.min.js',
+		'/media/jui/js/jquery-noconflict.js',
+		'/media/jui/js/jquery-migrate.js',
+		'/media/jui/js/jquery-migrate.min.js',
+		'/media/jui/js/bootstrap.js',
+		'/media/system/js/core-uncompressed.js',
+		'/media/system/js/tabs-state.js',
+		'/media/system/js/core.js',
+		'/media/system/js/mootools-core.js',
+		'/media/system/js/mootools-core-uncompressed.js',
+);
+
+foreach($doc->_scripts as $key => $script){
+	if(in_array($key, $dontInclude)){
+		unset($doc->_scripts[$key]);
+	}
+}
+
+
+defined( '_JEXEC' ) or die( 'Restricted access' );
+
+#Set to resolve jCaption Issues (http://www.joostrap.com/blog/joomla-jcaption-issue-conflict-a-snippet-of-code-to-help)
+if (isset($this->_script['text/javascript']))
+{
+    $this->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\',\s*function\(\)\s*{\s*new\s*JCaption\(\'img\.caption\'\);\s*}\);\s*%', '', $this->_script['text/javascript']);
+    if (empty($this->_script['text/javascript']))
+        unset($this->_script['text/javascript']);
+}
+
 $app = JFactory::getApplication();
 unset($this->_scripts[JURI::root(true).'/media/system/js/caption.js']);
 //unset($this->_scripts[JURI::root(true).'/media/system/js/mootools-core.js']);
@@ -28,10 +60,16 @@ $this->_script = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/vega.css" rel="stylesheet" /> 
     
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Rokkitt|Josefin+Slab:300,400|Karla' rel='stylesheet' type='text/css'>
-  <?php if($pageclass){?>
-      <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/<?php echo htmlspecialchars($pageclass) ?>.css" type="text/css"/>
+  	<?php if($pageclass){?>
+     <link rel="stylesheet" href="templates/<?php echo $this->template ?>/css/<?php echo htmlspecialchars($pageclass) ?>.css" type="text/css"/>
     <?php }?>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.3.0.min.js"></script>
+     
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Start head jdoc include -->
     <jdoc:include type="head" /> 
+    <!-- End head jdoc include -->
     <meta name="google-translate-customization" content="cdf027e5440b9c8f-cb40fc80eac9fe21-g025a20baa11a5cbc-19"></meta>
     </head>
 <body>
@@ -195,8 +233,6 @@ function googleTranslateElementInit() {
       </div>
       <div class="clearfix" style="height:6px;"></div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
    <script type="text/javascript">
       (function($){   
         $(window).load(function(){
