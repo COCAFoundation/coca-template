@@ -52,12 +52,14 @@ $this->_script = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s
   ?>
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/system/css/system.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/system/css/general.css" type="text/css" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/default.css" rel="stylesheet" />  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <!-- Start custom CSS for COCA Template -->
+    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/coca.css" rel="stylesheet" />  
+    <!--  End Custom CSS for COCA Template -->
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/powerRotator.css" rel="stylesheet" media="screen"/>
     <!-- Sprite Map CSS Files -->
-    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/social-icons.css" rel="stylesheet" /> 
-    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/vega.css" rel="stylesheet" /> 
+    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/social-icons-spritesheet.css" rel="stylesheet" /> 
+    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/vega-spritesheet.css" rel="stylesheet" /> 
     
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Rokkitt|Josefin+Slab:300,400|Karla' rel='stylesheet' type='text/css'>
   	<?php if($pageclass){?>
@@ -66,7 +68,7 @@ $this->_script = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.3.0.min.js"></script>
      
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Start head jdoc include -->
     <jdoc:include type="head" /> 
     <!-- End head jdoc include -->
@@ -233,54 +235,8 @@ function googleTranslateElementInit() {
       </div>
       <div class="clearfix" style="height:6px;"></div>
     </div>
-   <script type="text/javascript">
-      (function($){   
-        $(window).load(function(){
-          // dropdown
-          $('.deeper > a').addClass('dropdown-toggle');
-          $('.deeper > a').attr('data-toggle', 'dropdown');
-          $('.deeper > a').append('<b class="caret"></b>');
-          $('.nav-child > .divider-vertical').addClass('divider');    
-          $('.nav-child > .divider').removeClass('divider-vertical');  
-        });   
-        $(document).ready(function($) {
-          //alert('hello world');
-          var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
-          var baseHref = '';
-          if ($('base').attr('href') != undefined)
-            baseHref = $('base').attr('href');
-          $('a').each(function() {
-            var href = $(this).attr('href');
-            if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
-              $(this).click(function() {
-                var extLink = href.replace(/^https?\:\/\//i, '');
-                _gaq.push(['_trackEvent', 'External', 'Click', extLink]);
-                if ($(this).attr('target') != undefined && $(this).attr('target').toLowerCase() != '_blank') {
-                  setTimeout(function() { location.href = href; }, 200);
-                  return false;
-                }
-              });
-            }
-            else if (href && href.match(/^mailto\:/i)) {
-              $(this).click(function() {
-                var mailLink = href.replace(/^mailto\:/i, '');
-                _gaq.push(['_trackEvent', 'Email', 'Click', mailLink]);
-              });
-            }
-              else if (href && href.match(filetypes)) {
-                $(this).click(function() {
-                  var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
-                  var filePath = href;
-                  _gaq.push(['_trackEvent', 'Download', 'Click-' + extension, filePath]);
-                  if ($(this).attr('target') != undefined && $(this).attr('target').toLowerCase() != '_blank') {
-                    setTimeout(function() { location.href = baseHref + href; }, 200);
-                    return false;
-                  }
-                });
-              }
-          });
-        });
-      })(jQuery);
-	</script>
+    <!-- Start custom Javascript for COCA Template -->
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/javascript/coca.js" /></script>
+    <!--  End Custom Javascript for COCA Template -->
 </body>
 </html>

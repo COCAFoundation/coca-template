@@ -11,7 +11,7 @@ h1,
 h2,
 h3,
 h4 {
-	text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5);
+	/* text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.5); */
 }
 
 body {
@@ -814,13 +814,23 @@ label.error {
 }
 
 
-/************************ jDonation **************************/
-.control-label[required]:after {
-	font-weight:bold;
-	color:red;
-	content:'*';
+/* jDonation Update Section
+ * The JoomDonation CSS had some alterations on vanilla bootstrap, so I wanted to set them back to normal.
+ * It mostly affects radio button behaviors
+ *  */
+form.form-horizontal .control-label, form.form-horizontal .control-label label {
+    text-align: right !important;
+}
+.required {
+    padding-left: 1px !important;
+}
+#os_form .form-group input[type="radio"]{
+	/* margin: 4px 3px 0; */
+	margin-left: -20px !important;
+}
+#amount_container label input[type="radio"], #amount_container label input[type="checkbox"] {
+	/* margin: 0 2px 0 0; */
+	margin-left: -20px !important;
 }
 
-#jd_form .form-group > div {
-  padding-top:7px;
-}
+
