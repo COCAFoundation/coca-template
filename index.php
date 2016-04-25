@@ -237,6 +237,7 @@ function googleTranslateElementInit() {
     </div>
     <!-- Start custom Javascript for COCA Template -->
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/javascript/coca.js" /></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/javascript/jDonationConvert.js" /></script>
     <!--  End Custom Javascript for COCA Template -->
 </body>
 </html>
