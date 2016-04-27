@@ -31,6 +31,14 @@
 
   (function($){  
     $(document).ready(function($) {
+    	
+    	//Disabling Bootstrap that comes with jDonation
+    	if($('#donation-form').length !== 0 || $('#donation-failure-page').length !== 0){
+    		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]')[0].disabled=true;   
+    		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]')[0].disabled=true;  
+    		$('link[href="/media/com_jdonation/assets/css/style.css"]')[0].disabled=true; 
+    	}
+    	
 		if ($('#donation-form').length !== 0){		
 			$('#donation-form').find('.control-group').each(function() {
 				$(this).removeClass('control-group');
