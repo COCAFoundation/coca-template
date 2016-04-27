@@ -33,21 +33,21 @@
     $(document).ready(function($) {
     	
     	//Disabling Minified Bootstrap that comes with jDonation
-    	if($('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]').length){
+    	if ($('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]').length){
     		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]').disabled=true;   
     	} 
     	
     	//Disabling Bootstrap that comes with jDonation
-    	if($('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]').length){
+    	if ($('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]').length){
     		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]').disabled=true;     
     	}   
     	
     	//Disabling custom CSS that comes with jDonation
-    	if($('link[href="/media/com_jdonation/assets/css/style.css"]').length){
+    	if ($('link[href="/media/com_jdonation/assets/css/style.css"]').length){
     		$('link[href="/media/com_jdonation/assets/css/style.css"]').disabled=true;      
     	}   
     	
-		if ($('#donation-form').length !== 0){		
+		if ($('#donation-form').length){		
 			$('#donation-form').find('.control-group').each(function() {
 				$(this).removeClass('control-group');
 				$(this).addClass('form-group');
@@ -132,7 +132,7 @@
 		} 
 		
 		//Here we are updating the donation failure page to leverage Bootstrap panels
-		if ($('#donation-failure-page').length !== 0){	
+		if ($('#donation-failure-page').length){	
 			//First we select all of the control-groups
 			$('#donation-failure-page').find('.control-group').each(function(i) {
 				//The second control group (index 1) is our target
