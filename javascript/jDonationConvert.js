@@ -32,12 +32,20 @@
   (function($){  
     $(document).ready(function($) {
     	
+    	//Disabling Minified Bootstrap that comes with jDonation
+    	if($('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]').length){
+    		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]').disabled=true;   
+    	} 
+    	
     	//Disabling Bootstrap that comes with jDonation
-    	if($('#donation-form').length !== 0 || $('#donation-failure-page').length !== 0){
-    		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.min.css"]')[0].disabled=true;   
-    		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]')[0].disabled=true;  
-    		$('link[href="/media/com_jdonation/assets/css/style.css"]')[0].disabled=true; 
-    	}
+    	if($('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]').length){
+    		$('link[href="/media/com_jdonation/assets/bootstrap/css/bootstrap.css"]').disabled=true;     
+    	}   
+    	
+    	//Disabling custom CSS that comes with jDonation
+    	if($('link[href="/media/com_jdonation/assets/css/style.css"]').length){
+    		$('link[href="/media/com_jdonation/assets/css/style.css"]').disabled=true;      
+    	}   
     	
 		if ($('#donation-form').length !== 0){		
 			$('#donation-form').find('.control-group').each(function() {
