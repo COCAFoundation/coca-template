@@ -25,11 +25,11 @@ foreach($doc->_scripts as $key => $script){
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 #Set to resolve jCaption Issues (http://www.joostrap.com/blog/joomla-jcaption-issue-conflict-a-snippet-of-code-to-help)
-if (isset($this->_script['text/javascript']))
-{
+if (isset($this->_script['text/javascript'])){
     $this->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\',\s*function\(\)\s*{\s*new\s*JCaption\(\'img\.caption\'\);\s*}\);\s*%', '', $this->_script['text/javascript']);
-    if (empty($this->_script['text/javascript']))
+    if (empty($this->_script['text/javascript'])){
         unset($this->_script['text/javascript']);
+    }
 }
 
 $app = JFactory::getApplication();
@@ -77,8 +77,8 @@ $this->_script = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s
 <body>
   <?php if($this->countModules('debug')){ ?>
     <div class="container debug"><jdoc:include type="modules" name="debug" style="xhtml"/></div>
-    <?php }?>
-   <?php if($this->countModules('navbar')){ ?>
+  <?php }?>
+  <?php if($this->countModules('navbar')){ ?>
   <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
    <div class="container-fluid">
       <!-- Navbar Header -->

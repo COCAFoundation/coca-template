@@ -44,6 +44,21 @@
               }
             });
           }
-      });  
+      }); 
+      
+      //Resolving issue where error message is using bootstrap 2 error.
+      if ($('#system-message').length !== 0){
+    	  $('#system-message').find('.alert-error').each(function (){
+    		  $(this).addClass('alert-danger');
+    		  $(this).removeClass('alert-error');   		  
+    	  });
+    	  $('#system-message').find('.alert-message').each(function (){
+    		  $(this).addClass('alert-info');
+    		  $(this).removeClass('alert-message');   		  
+    	  });    	  
+      }
+      
+      
+      
     });
   })(jQuery);

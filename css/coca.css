@@ -98,7 +98,7 @@ body {
 	margin-top: 2px;
 	margin-bottom: auto;
 	color:#fff;
-	text-shadow: black 0.1em 0.1em 0.2em;
+	/* text-shadow: black 0.1em 0.1em 0.2em; */
 }
 
 .contextual-menu .nav-pills > li > a:hover{
